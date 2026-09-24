@@ -1,0 +1,29 @@
+/* Variables de design, reset et typographie de base */
+
+:root{
+  --bg:#0F1115;
+  --surface:#181B21;
+  --surface-2:#1F232B;
+  --ink:#F1F2F6;
+  --muted:#9497A3;
+  --line:#2A2E37;
+  --teal:#2DD4BF;
+  --teal-ink:#0B3B36;
+  --violet:#7C6CFF;
+  --danger:#FF5C5C;
+  --amber:#FFB020;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box;}
+
+html,body{
+  margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0);
+  padding-bottom:env(safe-area-inset-bottom,0);
+  min-height:100%;
+}
+
+.mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;}

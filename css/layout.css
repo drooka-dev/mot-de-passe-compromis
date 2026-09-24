@@ -1,0 +1,21 @@
+/* Structure de la page : décor de fond, en-tête, contenu, pied de page */
+
+.orbfield{position:fixed; inset:0; overflow:hidden; z-index:0; pointer-events:none;}
+.orb{position:absolute; border-radius:50%; filter:blur(70px); opacity:.16;}
+.orb1{width:360px; height:360px; background:var(--teal); top:-140px; right:-100px; animation:float1 18s ease-in-out infinite;}
+.orb2{width:280px; height:280px; background:var(--violet); bottom:-100px; left:-80px; animation:float2 22s ease-in-out infinite;}
+@keyframes float1{0%,100%{transform:translate(0,0)} 50%{transform:translate(-40px,50px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-40px)}}
+@media (prefers-reduced-motion: reduce){ .orb{animation:none;} }
+
+header, main, footer{position:relative; z-index:1;}
+
+header{padding:40px 20px 8px; max-width:560px; margin:0 auto;}
+header .eyebrow{font-size:.8rem; font-weight:600; color:var(--teal); display:flex; align-items:center; gap:6px;}
+header h1{margin:8px 0 8px; font-size:1.9rem; font-weight:800; letter-spacing:-.02em; line-height:1.15;}
+header p{margin:0; color:var(--muted); font-size:.94rem; line-height:1.55; max-width:44ch;}
+
+main{max-width:560px; margin:0 auto; padding:20px 16px 50px;}
+
+footer{text-align:center; color:var(--muted); font-size:.74rem; padding:16px 24px 34px; max-width:560px; margin:0 auto; line-height:1.6;}
+footer a{color:var(--muted);}
